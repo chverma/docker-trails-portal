@@ -4,7 +4,7 @@ services:
     image: jekyll/jekyll
     container_name: portal_server
     restart: always
-    command: bash -c "cd /trails-portal && bundle install && bundle exec jekyll serve"
+    command: bash -c "apk upgrade --update && apk add imagemagick && cd /trails-portal && bundle install && bundle exec jekyll serve"
     volumes:
       - ./trails-portal:/trails-portal
     ports:
