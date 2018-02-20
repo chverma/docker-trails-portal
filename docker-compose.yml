@@ -1,0 +1,11 @@
+version: '2'
+services:
+  portal:
+    image: jekyll/jekyll
+    container_name: portal_server
+    restart: always
+    command: bash -c "cd /trails-portal && bundle install && bundle exec jekyll serve"
+    volumes:
+      - ./trails-portal:/trails-portal
+    ports:
+      - 8001:4000
