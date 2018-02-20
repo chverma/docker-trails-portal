@@ -1,0 +1,3 @@
+[submodule "trails-portal"]
+	path = trails-portal
+	url = git@github.com:chverma/trails-portal.git
